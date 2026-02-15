@@ -9,9 +9,7 @@ app = FastAPI()
 # Configuração do Telegram
 API_ID = int(os.environ.get("API_ID", "37601553"))
 API_HASH = os.environ.get("API_HASH", "77a223dde9c4b04c9d2189c16a02afff")
-SESSION_STRING = os.environ.get("SESSION_STRING", "1AZWarzQBu5f31XrVOYPbF0K4l1P298MDlScVZ92c6dLjvhD6i0TudiUIPIqUdSzg3zOsbBPz9tD40eVGFu88Ndb9DxS37VKLIXjjBce0wLeQwtWLVQ7gaJPicsUDadSblPk5z8lxS68rPWHDizx2357MUj36k2rv3YLB3-gMWtlCQ58NjVu-uLkuw_McE60NannndxXc9P4jO9KEYdG2nRQsTmuADMbB9sa92GKsN0IY2iNmomgcp9rKVz2h0a8i9szqa6ZDEUN0hK6wJXqaMsi00yTUA2HBsWQnmpBS4bz2-cZPdyNMhkO8BJkvTuJgVtQJSZmdrTNU2MUCFgI9dcNnKP_-NS0="
-
-")
+SESSION_STRING = os.environ.get("SESSION_STRING", "1AZWarzQBu5f31XrVOYPbF0K4l1P298MDlScVZ92c6dLjvhD6i0TudiUIPIqUdSzg3zOsbBPz9tD40eVGFu88Ndb9DxS37VKLIXjjBce0wLeQwtWLVQ7gaJPicsUDadSblPk5z8lxS68rPWHDizx2357MUj36k2rv3YLB3-gMWtlCQ58NjVu-uLkuw_McE60NannndxXc9P4jO9KEYdG2nRQsTmuADMbB9sa92GKsN0IY2iNmomgcp9rKVz2h0a8i9szqa6ZDEUN0hK6wJXqaMsi00yTUA2HBsWQnmpBS4bz2-cZPdyNMhkO8BJkvTuJgVtQJSZmdrTNU2MUCFgI9dcNnKP_-NS0=")
 
 client = TelegramClient(StringSession(SESSION_STRING), API_ID, API_HASH)
 
@@ -158,5 +156,6 @@ async def fetch_channel_posts(request: Request):
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8000))
     uvicorn.run(app, host="0.0.0.0", port=port)
+
 
 
